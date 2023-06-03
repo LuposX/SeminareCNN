@@ -9,7 +9,8 @@ This Repository contains all the material I used for both of them.
 The trainings and inference Code for my self-trained CNN for digit recognition can be found [here](Proseminar_MNIST_CNN.ipynb) in form of jupyter file.
 Addtionally you can download the model from [here](https://drive.google.com/file/d/15QUc0498NM50-KL3woxGr6elq82t3ePx/view?usp=sharing).
 
-The model has the following architecture:
+## Model Architetcure
+
 ```
 Model(
   (hidden0): Sequential(
@@ -38,7 +39,8 @@ Model(
 )
 ```
 
-You can load the downloaded model and do inference like this:
+## Loading Model & Inference
+
 ```python
 model = Model.load_from_checkpoint("CNN_MNIST_epoch=2-step=237.ckpt")
 model.eval()
@@ -53,3 +55,9 @@ print("Probabilities for Predicted-Labels: ", y_hat)
 print(" ")
 print("Predicted Label: ", y_hat.argmax())
 ````
+
+## Results
+
+Cross-Entropy-Loss during training        |  Validation Accuracy on the test Set
+:-------------------------:|:---------------------------------------------------:
+![](train_loss.png)  |  ![](val_acc.png)
