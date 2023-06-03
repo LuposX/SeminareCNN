@@ -8,3 +8,48 @@ This Repository contains all the material I used for both of them.
 
 The trainings and inference Code for my self-trained CNN for digit recognition can be found [here](Proseminar_MNIST_CNN.ipynb) in form of jupyter file.
 Addtionally you can download the model from [here](https://drive.google.com/file/d/15QUc0498NM50-KL3woxGr6elq82t3ePx/view?usp=sharing).
+
+The model has the following architecture:
+```
+Model(
+  (hidden0): Sequential(
+    (0): Conv2d(1, 16, kernel_size=(4, 4), stride=(1, 1))
+    (1): LeakyReLU(negative_slope=0.2)
+  )
+  (hidden1): Sequential(
+    (0): Conv2d(16, 64, kernel_size=(4, 4), stride=(1, 1))
+    (1): LeakyReLU(negative_slope=0.2)
+  )
+  (hidden2): Sequential(
+    (0): Conv2d(64, 16, kernel_size=(4, 4), stride=(1, 1))
+    (1): LeakyReLU(negative_slope=0.2)
+  )
+  (hidden3): Sequential(
+    (0): Linear(in_features=5776, out_features=1000, bias=True)
+    (1): LeakyReLU(negative_slope=0.2)
+  )
+  (hidden4): Sequential(
+    (0): Linear(in_features=1000, out_features=200, bias=True)
+    (1): LeakyReLU(negative_slope=0.2)
+  )
+  (hidden5): Sequential(
+    (0): Linear(in_features=200, out_features=10, bias=True)
+  )
+)
+```
+
+You can load the downloaded model and do inference like this:
+```python
+model = Model.load_from_checkpoint("CNN_MNIST_epoch=2-step=237.ckpt")
+model.eval()
+
+with torch.no_grad():
+   y_hat = model(data.cuda())
+
+print("Results for Inference")
+print("---------------------------")
+print(" ")
+print("Probabilities for Predicted-Labels: ", y_hat)
+print(" ")
+print("Predicted Label: ", y_hat.argmax())
+````
