@@ -12,7 +12,7 @@ Addtionally you can download the model from [here](https://drive.google.com/file
 ## Model Architetcure
 
 ```
-Model(
+CNN(
   (hidden0): Sequential(
     (0): Conv2d(1, 16, kernel_size=(4, 4), stride=(1, 1))
     (1): LeakyReLU(negative_slope=0.2)
@@ -26,15 +26,12 @@ Model(
     (1): LeakyReLU(negative_slope=0.2)
   )
   (hidden3): Sequential(
-    (0): Linear(in_features=5776, out_features=1000, bias=True)
+    (0): Linear(in_features=5776, out_features=200, bias=True)
     (1): LeakyReLU(negative_slope=0.2)
   )
   (hidden4): Sequential(
-    (0): Linear(in_features=1000, out_features=200, bias=True)
-    (1): LeakyReLU(negative_slope=0.2)
-  )
-  (hidden5): Sequential(
     (0): Linear(in_features=200, out_features=10, bias=True)
+    (1): Softmax(dim=None)
   )
 )
 ```
@@ -42,7 +39,10 @@ Model(
 ## Loading Model & Inference
 
 ```python
-model = Model.load_from_checkpoint("CNN_MNIST_epoch=2-step=237.ckpt")
+# We need one extra dimesnion to emulate batch size.
+data = data.view(1, 1, 28, 28)
+
+model = net.load_from_checkpoint(checkpoint_folder + "/1L_RN_RC-epoch=4.ckpt")
 model.eval()
 
 with torch.no_grad():
