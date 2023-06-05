@@ -9,8 +9,17 @@ This Repository contains all the material I used for both of them.
 The trainings and inference Code for my self-trained CNN for digit recognition can be found [here](Proseminar_MNIST_CNN.ipynb) in form of jupyter file.
 Addtionally you can download the model from [here](https://drive.google.com/file/d/15QUc0498NM50-KL3woxGr6elq82t3ePx/view?usp=sharing).
 
-## Model Architetcure
+## Models
 
+I trained four different model, below I will shortly descibe them:
+- Main, the Baseline Standard Model.
+- RN_RC, encoperates randomly cropping(RC) the images and adding random noise(RN)
+- RN_RC_8f, uses 8filters instead of 16
+- RN_RC_BN, addtionally adds batchnorm(BN)
+
+You can find the Model checkpoints, in the respective folders.
+
+Architetcure of the Baseline Model:
 ```
 CNN(
   (hidden0): Sequential(
@@ -60,4 +69,4 @@ print("Predicted Label: ", y_hat.argmax())
 
 Cross-Entropy-Loss during training        |  Validation Accuracy on the test Set
 :-------------------------:|:---------------------------------------------------:
-![](train_loss.png)  |  ![](val_acc.png)
+![](train_loss.jpeg)  |  ![](val_acc.jpeg)
