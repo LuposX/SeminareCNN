@@ -10,9 +10,9 @@ The trainings and inference Code for my self-trained CNN for digit recognition c
 
 ## Models
 
-I trained four different model, below I will shortly descibe them:
+I trained four different model, below I will shortly describe them:
 - Main, the Baseline Standard Model.
-- RN_RC, encoperates randomly cropping(RC) the images and adding random noise(RN)
+- RN_RC, encoperates random cropping(RC) of the dataset images and adding random noise(RN)
 - RN_RC_8f, uses 8filters instead of 16
 - RN_RC_BN, addtionally adds batchnorm(BN)
 
@@ -20,6 +20,7 @@ You can find the Model checkpoints, in the respective folders.
 
 ### Architetcure of the Baseline Model
 
+```
 CNN(
   (hidden0): Sequential(
     (0): Conv2d(1, 16, kernel_size=(4, 4), stride=(1, 1))
@@ -42,6 +43,8 @@ CNN(
     (1): Softmax(dim=None)
   )
 )
+````
+
 
 ## Loading Model & Inference
 
