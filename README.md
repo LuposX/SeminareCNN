@@ -20,7 +20,28 @@ You can find the Model checkpoints, in the respective folders.
 
 ### Architetcure of the Baseline Model
 
-![](Main.png)
+CNN(
+  (hidden0): Sequential(
+    (0): Conv2d(1, 16, kernel_size=(4, 4), stride=(1, 1))
+    (1): LeakyReLU(negative_slope=0.2)
+  )
+  (hidden1): Sequential(
+    (0): Conv2d(16, 64, kernel_size=(4, 4), stride=(1, 1))
+    (1): LeakyReLU(negative_slope=0.2)
+  )
+  (hidden2): Sequential(
+    (0): Conv2d(64, 16, kernel_size=(4, 4), stride=(1, 1))
+    (1): LeakyReLU(negative_slope=0.2)
+  )
+  (hidden3): Sequential(
+    (0): Linear(in_features=5776, out_features=200, bias=True)
+    (1): LeakyReLU(negative_slope=0.2)
+  )
+  (hidden4): Sequential(
+    (0): Linear(in_features=200, out_features=10, bias=True)
+    (1): Softmax(dim=None)
+  )
+)
 
 ## Loading Model & Inference
 
