@@ -13,7 +13,7 @@ The trainings and inference Code for my self-trained CNN for digit recognition c
 I trained four different model, below I will shortly describe them:
 - [CNN](CNN), the Baseline Standard Model based on a Convolutional Neural Network.
 - [CNN_NOISE_RC](CNN_NOISE_RC), the Baseline model, but trained on altered data, where random noise and random cropping was used.
-- [FC_NN](CNN_NOISE_RC), a model without convolutional layers using only fully connected layers, but habing the same size as the CNN Model.
+- [FC_NN](CNN_NOISE_RC), a model without convolutional layers using only fully connected layers, but having the same size as the CNN Model.
 - [FC_NN_NOISE_RC](CNN_NOISE_RC), the fully connected model with random Noise and Random Cropping.
 
 You can find the Model checkpoints and code, in the respective folders.
@@ -109,4 +109,4 @@ print("Predicted Label: ", y_hat.argmax())
 
 Cross-Entropy-Loss during training        |  Validation Accuracy on the test Set
 :-------------------------:|:---------------------------------------------------:
-![](Results/train_loss_result_data.png)  |  ![](Results/val_loss_result_data.png)
+![](Results/train_loss_result_data.png)  |  ![](Results/val_acc_result_data.png)
