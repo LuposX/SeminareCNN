@@ -84,7 +84,7 @@ Total mult-adds (M): 0.23
 
 ## Loading Model & Inference
 
-To load and use a Model check the `.ipynb` associated with the model.
+To load and use a Model check the `.ipynb` associated with the model.  
 Basic usage:  
 
 ```python
