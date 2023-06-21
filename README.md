@@ -6,17 +6,17 @@
 My Topic was "Convolutional Neural Networks" and I had the task to write a Paper and present a Presentation about this topic.
 This Repository contains all the material I used for both of them.
 
-The trainings and inference Code for my self-trained CNN for digit recognition can be found [here](Proseminar_MNIST_CNN.ipynb) in form of jupyter file.
+The trainings and inference Code for my self-trained CNN for digit recognition can be found in form of jupyter file.
 
 ## Models
 
 I trained four different model, below I will shortly describe them:
-- Main, the Baseline Standard Model.
-- RN_RC, encoperates random cropping(RC) of the dataset images and adding random noise(RN)
-- RN_RC_8f, uses 8filters instead of 16
-- RN_RC_BN, addtionally adds batchnorm(BN)
+- CNN, the Baseline Standard Model based on a Convolutional Neural Network.
+- CNN_NOISE_RC, the Baseline model, but trained on altered data, where random noise and random cropping was used.
+- FC_NN, a model without convolutional layers using only fully connected layers, but habing the same size as the CNN Model.
+- FC_NN_NOISE_RC, the fully connected model with random Noise and Random Cropping.
 
-You can find the Model checkpoints, in the respective folders.
+You can find the Model checkpoints and code, in the respective folders.
 
 ### Architetcure of the Baseline Model
 
