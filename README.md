@@ -16,7 +16,8 @@ I trained four different model, below I will shortly describe them:
 - [FC_NN](CNN_NOISE_RC), a model without convolutional layers using only fully connected layers, but having the same size as the CNN Model.
 - [FC_NN_NOISE_RC](CNN_NOISE_RC), the fully connected model with random Noise and Random Cropping.
 
-You can find the Model checkpoints and code, in the respective folders.
+You can find the Model checkpoints and code, in the respective folders.  
+The Architecture graphics in the architecture fodler were made with [Netron](https://github.com/lutzroeder/netron).
 
 ### Architecture of the Baseline Model
 
