@@ -6,7 +6,9 @@
 My Topic was "Convolutional Neural Networks" and I had the task to write a Paper and present a Presentation about this topic.
 This Repository contains all the material I used for both of them.
 
-The trainings and inference Code for my self-trained CNN for digit recognition can be found in form of jupyter file.
+The trainings and inference Code for my self-trained CNN for digit recognition can be found in form of jupyter file.  
+
+In the [Presentation Folder](Presentation) can all files related to the presentation be found.
 
 ## Models
 
