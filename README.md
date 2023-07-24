@@ -8,7 +8,8 @@ This Repository contains all the material I used for both of them.
 
 The trainings and inference Code for my self-trained CNN for digit recognition can be found in form of jupyter file.  
 
-In the [Presentation Folder](Presentation) can all files related to the presentation be found.
+In the [Presentation Folder](Presentation) all files related to the presentation can be found.  
+In the [Peport Folder](Report) all files related to the Report can be found.
 
 ## Models
 
